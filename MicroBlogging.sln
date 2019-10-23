@@ -1,10 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{8DB2FC5D-9053-4476-82D7-D67012997F9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBlogging.Presentation", "MicroBlogging.Presentation\MicroBlogging.Presentation.csproj", "{8DB2FC5D-9053-4476-82D7-D67012997F9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "Dal\Dal.csproj", "{B9F811E8-4693-49C0-A566-77FFE43F45E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{57847EC0-4E25-462E-B266-208C21CD3474}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBlogging.Domain", "MicroBlogging.Domain\MicroBlogging.Domain.csproj", "{57847EC0-4E25-462E-B266-208C21CD3474}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroBlogging.Domain", "MicroBlogging.Domain", "{8291D207-16DB-4780-A676-8498B1DA7FAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroBlogging.Presentation", "MicroBlogging.Presentation", "{5749151B-E857-43F8-89D3-CE87F7948B35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{D84BD104-51BC-47E7-8DB6-ABD40261BB89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +30,10 @@ Global
 		{57847EC0-4E25-462E-B266-208C21CD3474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57847EC0-4E25-462E-B266-208C21CD3474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57847EC0-4E25-462E-B266-208C21CD3474}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57847EC0-4E25-462E-B266-208C21CD3474} = {8291D207-16DB-4780-A676-8498B1DA7FAB}
+		{8DB2FC5D-9053-4476-82D7-D67012997F9D} = {5749151B-E857-43F8-89D3-CE87F7948B35}
+		{B9F811E8-4693-49C0-A566-77FFE43F45E9} = {D84BD104-51BC-47E7-8DB6-ABD40261BB89}
 	EndGlobalSection
 EndGlobal
