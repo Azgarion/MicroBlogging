@@ -18,6 +18,8 @@ namespace MicroBlogging
 
         public IConfiguration Configuration { get; }
 
+        private readonly string CorsOrigin = "AllowAnyOrigin";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -28,6 +30,11 @@ namespace MicroBlogging
                 sp.GetRequiredService<IOptions<MicroBlogDatabaseSettings>>().Value);
             services.AddSingleton<ThreadService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors(options =>
+            {
+                options.AddPolicy(CorsOrigin, builder => builder.WithOrigins().AllowAnyOrigin().AllowAnyHeader());
+                
+            } );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +50,7 @@ namespace MicroBlogging
                 app.UseHsts();
             }
 
+            app.UseCors(CorsOrigin);
             app.UseHttpsRedirection();
             app.UseMvc();
         }
